@@ -10,7 +10,7 @@ Utilities for calculating (orthonormal) bases.
 test.test()
 ```
 
-## References
+## Bibliography
 HUGHES, J. F., MÖLLER, T.: Building an Orthonormal Basis from a Unit Vector. *Journal of Graphics Tools 4 (1999)*, 4, pp. 33-35.
 
 FRISVAD, J. R.: Building an Orthonormal Basis from a 3D Unit Vector Without Normalization. *Journal of Graphics Tools 16 (2012)*, 3, pp. 151–159.
