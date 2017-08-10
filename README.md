@@ -5,6 +5,17 @@ Utilities for calculating (orthonormal) bases.
 
 ## Use
 
+<p align="center">
+<img src="res/HughesMoller.png" width="286">
+<img src="res/Frisvad.png" width="286">
+<img src="res/Duff.png" width="286">
+</p>
+
+**Largest Error**
+* Hughes-Möller: 1.19906977865e-14
+* Frisvad: 0.0251273226272
+* Duff: 5.49560397189e-15
+
 ```python
 # Code
 test.test()
