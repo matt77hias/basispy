@@ -2,8 +2,8 @@
 import numpy as np
 from math_utils import normalize, copysign
 
-# Calculates an orthonormal basis from a given unit vector
-# with the method of Hughes and Möller.
+# Calculates an orthonormal basis from a given unit vector with the method of 
+# Hughes and Möller.
 def OrthonormalBasis_HughesMoller(n):
     if np.abs(n[0]) > np.abs(n[2]):
         u = np.array([-n[1], n[0], 0.0], dtype=np.float32)
@@ -13,8 +13,8 @@ def OrthonormalBasis_HughesMoller(n):
     b1 = np.cross(b2, n)
     return (n, b1, b2)
      
-# Calculates an orthonormal basis from a given unit vector
-# with the method of Frisvad.
+# Calculates an orthonormal basis from a given unit vector with the method of 
+# Frisvad.
 def OrthonormalBasis_Frisvad(n):
     if (n[2] < -0.9999999):
         b1 = np.array([ 0.0, -1.0, 0.0], dtype=np.float32)
@@ -27,8 +27,8 @@ def OrthonormalBasis_Frisvad(n):
     b2 = np.array([b, 1.0 - n[1] * n[1] * a, -n[1]], dtype=np.float32)
     return (n, b1, b2)
 
-# Calculates an orthonormal basis from a given unit vector
-# with the method of Duff, Burgess, Christensen, Hery, Kensler, Liani and Villemin.
+# Calculates an orthonormal basis from a given unit vector with the method of 
+# Duff, Burgess, Christensen, Hery, Kensler, Liani and Villemin.
 def OrthonormalBasis_Duff(n):
     s = copysign(1.0, n[2])
     a = -1.0 / (s + n[2])
@@ -37,8 +37,8 @@ def OrthonormalBasis_Duff(n):
     b2 = np.array([b, s + n[1] * n[1] * a, -n[1]], dtype=np.float32)
     return (n, b1, b2)
     
-# Calculates the error (deviatiation from orthonormality) 
-# of a given orthonormal basis
+# Calculates the error (deviatiation from orthonormality) of a given orthonormal 
+# basis
 def OrthonormalBasis_Error(n, b1, b2):
     o_n = np.linalg.norm(n) - 1.0
     o_b1 = np.linalg.norm(b1) - 1.0
