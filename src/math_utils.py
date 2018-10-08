@@ -5,7 +5,7 @@ import numpy as np
 def normalize(v):
     norm = np.linalg.norm(v)
     return v if norm == 0.0 else v/norm
-   
+
 # Copy the sign of the second argument to
 # the first argument (sign(0.0) = +)
 def copysign(v, x):
