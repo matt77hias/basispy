@@ -51,7 +51,7 @@ def test(nb_samples=16, d=0.001, rng=np.random):
     for py in range(res):
         x = -1.0
         for px in range(res):
-            for i in range(nb_samples):
+            for _ in range(nb_samples):
                 nx = x + rng.uniform() * d
                 ny = y + rng.uniform() * d
                 nz2 = 1.0 - nx*nx - ny*ny
