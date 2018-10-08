@@ -59,7 +59,7 @@ def test(nb_samples=16, d=0.001, rng=np.random):
                     continue
                 nz = -np.sqrt(nz2)
                 n = np.array([nx, ny, nz], dtype=np.float32)
-                
+
                 for strategy in strategies:
                     strategy.AddSample(py, px, n)
 
