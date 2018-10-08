@@ -5,20 +5,20 @@ import numpy as np
 from onb import OrthonormalBasis_HughesMoller, OrthonormalBasis_Frisvad, OrthonormalBasis_Duff, OrthonormalBasis_Error
 
 class OrthonormalBasisStrategy:
-    
+
     def __init__(self, name, f):
         self.name = name
         self.f = f
-        
+
     def OrthonormalBasis(self, n):
         return self.f(n)
-        
+
     def Start(self, res):
         self.data = np.zeros([res, res], dtype=np.float32)
         self.count = np.zeros([res, res], dtype=np.uint32)
         self.worst_error = 0.0
         self.worst_basis = None
-        
+
     def AddSample(self, py, px, n):
         basis = self.OrthonormalBasis(n)
         error = OrthonormalBasis_Error(*basis)
@@ -27,14 +27,14 @@ class OrthonormalBasisStrategy:
             self.worst_basis = basis
         self.data[py,px] += error
         self.count[py,px] += 1
-        
+
     def Stop(self):
         for py in range(self.data.shape[0]): 
             for px in range(self.data.shape[1]):
                 if self.count[py,px] != 0:
                     self.data[py,px] /= self.count[py,px]
         return self.data
-  
+
 strategies = [
      OrthonormalBasisStrategy('HughesMoller', OrthonormalBasis_HughesMoller), \
      OrthonormalBasisStrategy('Frisvad', OrthonormalBasis_Frisvad), \
@@ -63,7 +63,7 @@ def test(nb_samples=16, d=0.001, rng=np.random):
                 for strategy in strategies:
                     strategy.AddSample(py, px, n)
             
-            x += d  
+            x += d
         y +=d
          
     for strategy in strategies:
