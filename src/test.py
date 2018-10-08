@@ -65,7 +65,7 @@ def test(nb_samples=16, d=0.001, rng=np.random):
 
             x += d
         y +=d
-         
+
     for strategy in strategies:
         data = strategy.Stop()
 
