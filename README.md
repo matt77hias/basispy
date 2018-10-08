@@ -1,6 +1,9 @@
-[![License][s1]][li]
+[![Code quality][s1]][co] [![License][s2]][li]
 
-[s1]: https://img.shields.io/badge/licence-GPL%203.0-blue.svg
+[s1]: https://api.codacy.com/project/badge/Grade/5db9d4e0cab34f14b019717fed343b6b
+[s2]: https://img.shields.io/badge/licence-GPL%203.0-blue.svg
+
+[co]: https://www.codacy.com/app/matt77hias/basispy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matt77hias/basispy&amp;utm_campaign=Badge_Grade
 [li]: https://raw.githubusercontent.com/matt77hias/basispy/master/LICENSE.txt
 
 # basispy
