@@ -14,9 +14,9 @@ Utilities for calculating (orthonormal) bases.
 ## Use
 
 <p align="center">
-<img src="res/HughesMoller.png" width="286">
-<img src="res/Frisvad.png" width="286">
-<img src="res/Duff.png" width="286">
+<img src="res/HughesMoller.png" width="285">
+<img src="res/Frisvad.png" width="285">
+<img src="res/Duff.png" width="285">
 </p>
 
 **Largest Error**
